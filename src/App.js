@@ -1,17 +1,17 @@
-import './App.css';
-import Header from './Component/Shared/Header/Header';
-import Home from './Component/Home/Home';
-import Footer from './Component/Shared/Footer/Footer';
-import Account from './Component/Shared/Account/Account/Account';
-import NotFound from './Component/Shared/NotFound/NotFound';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import PrivateRoute from './PrivateRoute/PrivateRoute';
-import AuthProvider from './context/AuthProvider';
-import Dashboard from './Component/Dashboard/Dashboard/Dashboard';
-import Bicycles from './Component/Bicycles/Bicycles';
-import OrderNow from './Component/OrderNow/OrderNow';
-import OrderUs from './Component/OrderUs/OrderUs';
-import SingleBicycleDetails from './Component/SingleBicycleDetails/SingleBicycleDetails';
+import "./App.css";
+import Header from "./Component/Shared/Header/Header";
+import Home from "./Component/Home/Home";
+import Footer from "./Component/Shared/Footer/Footer";
+import Account from "./Component/Shared/Account/Account/Account";
+import NotFound from "./Component/Shared/NotFound/NotFound";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import AuthProvider from "./context/AuthProvider";
+import Dashboard from "./Component/Dashboard/Dashboard/Dashboard";
+import Bicycles from "./Component/Bicycles/Bicycles";
+import OrderNow from "./Component/OrderNow/OrderNow";
+import OrderUs from "./Component/OrderUs/OrderUs";
+import SingleBicycleDetails from "./Component/SingleBicycleDetails/SingleBicycleDetails";
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
               <Bicycles></Bicycles>
             </Route>
             <Route exact path="/bicycles/:bicycleID">
-              <SingleBicycleDetails ></SingleBicycleDetails>
+              <SingleBicycleDetails></SingleBicycleDetails>
             </Route>
             <PrivateRoute exact path="/ordernow/:cycleID">
               <OrderNow></OrderNow>

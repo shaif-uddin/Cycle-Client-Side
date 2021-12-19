@@ -1,21 +1,24 @@
-import axios from 'axios';
-import { useState, useEffect } from 'react';
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 export const useCycles = () => {
-    const [cycles, setCycles] = useState([]);
-    const [loader, setLoader] = useState(false);
-    useEffect(() => {
-        setLoader(true);
-        let url = "https://hero-cycle.herokuapp.com/cycles";
-        axios.get(url)
-            .then(result => {
-                if (result.data) {
-                    setCycles(result.data)
-                    setLoader(false)
-                }
-            })
-            .catch(e => { })
-            .finally(() => { setLoader(false) });
-    }, [])
-    return [cycles, setCycles, loader]
-}
+  const [cycles, setCycles] = useState([]);
+  const [loader, setLoader] = useState(false);
+  useEffect(() => {
+    setLoader(true);
+    let url = "https://hero-cycle.herokuapp.com/cycles";
+    axios
+      .get(url)
+      .then((result) => {
+        if (result.data) {
+          setCycles(result.data);
+          setLoader(false);
+        }
+      })
+      .catch((e) => {})
+      .finally(() => {
+        setLoader(false);
+      });
+  }, []);
+  return [cycles, setCycles, loader];
+};
